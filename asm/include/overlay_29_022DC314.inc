@@ -1,15 +1,15 @@
 #pragma once
-.public DirectoryFileMngr_OpenDirectoryFile
 .public AllocTopScreenStatus
 .public ChangeGiratinaFormIfSkyDungeon
 .public ClearHiddenStairs
 .public CloseFixedBin
 .public CountItemsOnFloorForAcuteSniffer
-.public Debug_Print0
 .public DIRECTIONS_XY
 .public DUNGEON_PTR
+.public Debug_Print0
 .public DeleteAllMonsterSpriteFiles
 .public DetermineAllTilesWalkableNeighbors
+.public DirectoryFileMngr_OpenDirectoryFile
 .public DisplayFloorCard
 .public DisplayMessage
 .public DisplayMessage2
@@ -106,6 +106,7 @@
 .public ov10_022C159C
 .public ov10_022C22A0
 .public ov29_022DC240
+.public ov29_022DC2B8
 .public ov29_022E0434
 .public ov29_022E081C
 .public ov29_022E0DFC
