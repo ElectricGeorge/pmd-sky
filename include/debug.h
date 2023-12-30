@@ -73,7 +73,7 @@ void Debug_Stripped6(void);
 // prog_pos: program position info
 // msg: base message
 // return: number of characters printed, excluding the null-terminator
-s32 AppendProgPos(u8* str, struct prog_pos_info* prog_pos, const u8* msg);
+s32 Debug_AppendProgPos(u8* str, struct prog_pos_info* prog_pos, const u8* msg);
 
 // Does nothing, only called in the debug initialization function.
 void Debug_Stripped5(void);
@@ -88,11 +88,11 @@ void Debug_PrintTrace(const u8* msg, struct prog_pos_info* prog_pos);
 // Would display a printf format string on the top screen in the debug binary.
 // This still constructs the string with vsprintf, but doesn't actually do anything with it in the final binary.
 // Identical to Debug_Print0 in release builds.
-void DebugDisplay(const u8* fmt, ...);
+void Debug_PrintDisplay(const u8* fmt, ...);
 
 // Would log a printf format string in the debug binary.
 // This still constructs the string with vsprintf, but doesn't actually do anything with it in the final binary.
-// Identical to DebugDisplay in release builds.
+// Identical to Debug_PrintDisplay in release builds.
 void Debug_Print0(const u8* fmt, ...);
 
 // Would have initialized the second set of debug flags.

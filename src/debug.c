@@ -3,8 +3,8 @@
 extern s32 vsprintf(u8* str, const u8* format, va_list ap);
 extern u8* strcpy(u8* dest, const u8* src);
 extern u8* strcat(u8* dest, const u8* src);
-extern void WaitForever(void);
 extern s32 sprintf(u8* str, const u8* format, ...);
+extern void WaitForever(void);
 
 extern u8 STRING_DEBUG_EMPTY;
 extern u8 STRING_DEBUG_FORMAT_LINE_FILE;
@@ -42,7 +42,7 @@ void Debug_SetDebugFlag(enum debug_flag flag, u32 val) {}
 
 void Debug_Stripped6(void) {}
 
-s32 AppendProgPos(u8* str, struct prog_pos_info* prog_pos, const u8* msg) {
+s32 Debug_AppendProgPos(u8* str, struct prog_pos_info* prog_pos, const u8* msg) {
     if (msg == NULL) {
         msg = &STRING_DEBUG_EMPTY;
     };
@@ -61,9 +61,9 @@ void Debug_PrintTrace(const u8* msg, struct prog_pos_info* prog_pos) {
 
     if (prog_pos != NULL) {
         if (msg != NULL) {
-            AppendProgPos(message_buffer, prog_pos, msg);
+            Debug_AppendProgPos(message_buffer, prog_pos, msg);
         } else {
-            AppendProgPos(message_buffer, prog_pos, &STRING_DEBUG_SPACED_PRINT);
+            Debug_AppendProgPos(message_buffer, prog_pos, &STRING_DEBUG_SPACED_PRINT);
         };
     } else {
         if (msg != NULL) {
@@ -76,7 +76,7 @@ void Debug_PrintTrace(const u8* msg, struct prog_pos_info* prog_pos) {
     // Call to function that actually print something would have been here
 }
 
-void DebugDisplay(const u8* fmt, ...) {
+void Debug_PrintDisplay(const u8* fmt, ...) {
     va_list args;
     va_start(args, fmt);
     u8 message_buffer[256];
@@ -117,6 +117,6 @@ void Debug_FatalError(struct prog_pos_info *prog_pos, const u8* fmt, ...) {
     } else {
         strcpy(message_buffer, &STRING_DEBUG_LOG_NULL);
     }
-    DebugDisplay(&STRING_DEBUG_STRING_NEWLINE, message_buffer);
+    Debug_PrintDisplay(&STRING_DEBUG_STRING_NEWLINE, message_buffer);
     WaitForever();
 }
