@@ -1,5 +1,5 @@
-#ifndef PMDSKY_OVERLAY_29_022DC240_H
-#define PMDSKY_OVERLAY_29_022DC240_H
+#ifndef PMDSKY_POLY_TEXT_H
+#define PMDSKY_POLY_TEXT_H
 
 struct unk_ov29_022DC240_t {
     char unk0[0x17704];
@@ -19,4 +19,4 @@ struct unk_ov29_022DC240_t {
 void ov29_022DC240(struct unk_ov29_022DC240_t *param0);
 void ov29_022DC2B8(struct unk_ov29_022DC240_t *param0);
 
-#endif //PMDSKY_OVERLAY_29_022DC240_H
+#endif //PMDSKY_POLY_TEXT_H
