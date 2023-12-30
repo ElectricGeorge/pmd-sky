@@ -25,8 +25,8 @@
 .public DrawMinimapTile
 .public DUNGEON_PTR
 .public DungeonRandInt
-.public DungeonRngSetPrimary
-.public DungeonRngSetSecondary
+.public DgRandom_EndSystemRandomMode
+.public DgRandom_StartSystemRandomMode
 .public EnableAllLearnableIqSkills
 .public EnableIqSkill
 .public EndBurnClassStatus

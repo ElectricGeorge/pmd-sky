@@ -2981,7 +2981,7 @@ RunDungeonMode: ; 0x0234BF28
 	str r4, [r1, #8]
 	ldr r0, [r0, #4]
 	str r4, [r0, #0xc]
-	bl DungeonAlloc
+	bl Dg_CreateDungeonBuffer
 	ldr r1, _0234C1C8 ; =ov29_023537D8
 	ldr r1, [r1, #4]
 	str r0, [r1, #4]

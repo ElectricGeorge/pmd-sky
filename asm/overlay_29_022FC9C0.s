@@ -8,7 +8,7 @@ ov29_022FC9C0: ; 0x022FC9C0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
 	sub sp, sp, #0x28
 	mov r0, #0
-	bl DungeonRngSetSecondary
+	bl DgRandom_StartSystemRandomMode
 	mov sl, #0
 	mov r8, #1
 	mov sb, sl
@@ -223,7 +223,7 @@ _022FCCD0:
 	mov sl, r0, asr #0x10
 	cmp sl, #4
 	blt _022FCAB4
-	bl DungeonRngSetPrimary
+	bl DgRandom_EndSystemRandomMode
 	add sp, sp, #0x28
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0
@@ -336,7 +336,7 @@ _022FCE34:
 	bl DungeonRandInt
 	mov sl, r0
 	mov r0, #0
-	bl DungeonRngSetSecondary
+	bl DgRandom_StartSystemRandomMode
 	bl ov29_022FBF08
 	mov sb, #0
 	mov fp, sb
@@ -405,9 +405,9 @@ _022FCF48:
 	add fp, fp, #1
 	cmp fp, #0x20
 	blt _022FCE74
-	bl DungeonRngSetPrimary
+	bl DgRandom_EndSystemRandomMode
 	mov r0, #0
-	bl DungeonRngSetSecondary
+	bl DgRandom_StartSystemRandomMode
 	ldrb r0, [sp, #0x2c]
 	cmp r0, #0
 	beq _022FD060
@@ -479,7 +479,7 @@ _022FD060:
 	bl SetTargetMonsterNotFoundFlag
 _022FD070:
 	bl ov29_022FBF30
-	bl DungeonRngSetPrimary
+	bl DgRandom_EndSystemRandomMode
 	add sp, sp, #0x34
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0

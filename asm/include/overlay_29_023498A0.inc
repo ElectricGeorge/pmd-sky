@@ -16,7 +16,7 @@
 .public Debug_Print0
 .public DUNGEON_FADES_PTR
 .public DUNGEON_PTR
-.public DungeonAlloc
+.public Dg_CreateDungeonBuffer
 .public DungeonFree
 .public DungeonRandInt
 .public DungeonZInit

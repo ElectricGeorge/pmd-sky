@@ -5870,7 +5870,7 @@ InitEnemySpawnStats: ; 0x022FBF58
 	ldr r1, [r1]
 	add r1, r1, #0xf4
 	add r5, r1, #0x3400
-	bl DungeonRngSetSecondary
+	bl DgRandom_StartSystemRandomMode
 	bl ov29_022FBF08
 	add r0, sp, #0x16
 	mov r1, #0
@@ -6060,7 +6060,7 @@ _022FC1FC:
 	cmp r4, #0x258
 	blt _022FC1FC
 	bl ov29_022FBF30
-	bl DungeonRngSetPrimary
+	bl DgRandom_EndSystemRandomMode
 	add sp, sp, #0x218
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0
@@ -6280,7 +6280,7 @@ SpawnTeam: ; 0x022FC50C
 	sub sp, sp, #0x44
 	mov sl, r0
 	mov r0, #0
-	bl DungeonRngSetSecondary
+	bl DgRandom_StartSystemRandomMode
 	ldr r0, _022FC98C ; =DUNGEON_PTR
 	ldr r0, [r0]
 	add r1, r0, #0xcc00
@@ -6585,7 +6585,7 @@ _022FC964:
 	blt _022FC908
 	add r0, sp, #0x18
 	bl sub_0200F9B4
-	bl DungeonRngSetPrimary
+	bl DgRandom_EndSystemRandomMode
 	add sp, sp, #0x44
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0

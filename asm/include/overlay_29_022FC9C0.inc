@@ -8,8 +8,8 @@
 .public DungeonGetSpriteIndex
 .public DungeonRandInt
 .public DungeonRandOutcome__022EAB20
-.public DungeonRngSetPrimary
-.public DungeonRngSetSecondary
+.public DgRandom_EndSystemRandomMode
+.public DgRandom_StartSystemRandomMode
 .public EnableAllLearnableIqSkills
 .public EntityIsValid__022FC99C
 .public ExclusiveItemEffectFlagTest

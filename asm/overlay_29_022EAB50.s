@@ -66,8 +66,8 @@ DungeonRngUnsetSecondary: ; 0x022EAC34
 _022EAC48: .word DUNGEON_PRNG_STATE
 	arm_func_end DungeonRngUnsetSecondary
 
-	arm_func_start DungeonRngSetSecondary
-DungeonRngSetSecondary: ; 0x022EAC4C
+	arm_func_start DgRandom_StartSystemRandomMode
+DgRandom_StartSystemRandomMode: ; 0x022EAC4C
 	ldr r1, _022EAC60 ; =DUNGEON_PRNG_STATE
 	mov r2, #1
 	strb r2, [r1]
@@ -75,17 +75,17 @@ DungeonRngSetSecondary: ; 0x022EAC4C
 	bx lr
 	.align 2, 0
 _022EAC60: .word DUNGEON_PRNG_STATE
-	arm_func_end DungeonRngSetSecondary
+	arm_func_end DgRandom_StartSystemRandomMode
 
-	arm_func_start DungeonRngSetPrimary
-DungeonRngSetPrimary: ; 0x022EAC64
+	arm_func_start DgRandom_EndSystemRandomMode
+DgRandom_EndSystemRandomMode: ; 0x022EAC64
 	ldr r0, _022EAC74 ; =DUNGEON_PRNG_STATE
 	mov r1, #0
 	strb r1, [r0]
 	bx lr
 	.align 2, 0
 _022EAC74: .word DUNGEON_PRNG_STATE
-	arm_func_end DungeonRngSetPrimary
+	arm_func_end DgRandom_EndSystemRandomMode
 
 	arm_func_start ov29_022EAC78
 ov29_022EAC78: ; 0x022EAC78

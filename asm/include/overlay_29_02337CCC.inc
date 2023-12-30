@@ -13,8 +13,8 @@
 .public DungeonRand16Bit
 .public DungeonRandInt
 .public DungeonRandRange
-.public DungeonRngSetPrimary
-.public DungeonRngSetSecondary
+.public DgRandom_EndSystemRandomMode
+.public DgRandom_StartSystemRandomMode
 .public EntityIsValid__02337CA8
 .public EntityIsValid__02344AF8
 .public FIRST_DUNGEON_WITH_MONSTER_HOUSE_TRAPS

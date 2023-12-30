@@ -286,7 +286,7 @@ ov29_02344E88: ; 0x02344E88
 	sub sp, sp, #0xc
 	mov r4, r0
 	mov r0, #2
-	bl DungeonRngSetSecondary
+	bl DgRandom_StartSystemRandomMode
 	ldrsh r0, [r4]
 	ldrsh r1, [r4, #2]
 	bl DungeonRandRange
@@ -382,7 +382,7 @@ _02344FE8:
 	mov r0, sl
 	bl MemFree
 _02344FF8:
-	bl DungeonRngSetPrimary
+	bl DgRandom_EndSystemRandomMode
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end ov29_02344E88

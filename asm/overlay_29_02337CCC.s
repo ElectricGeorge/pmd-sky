@@ -10688,7 +10688,7 @@ _02340E6C:
 	cmp r1, r0
 	bge _02340EC8
 	mov r0, #3
-	bl DungeonRngSetSecondary
+	bl DgRandom_StartSystemRandomMode
 	sub r0, r6, #1
 	bl DungeonRandInt
 	add r3, sp, #0
@@ -10697,7 +10697,7 @@ _02340E6C:
 	add r0, r3, r0, lsl #1
 	add r1, r1, #0x4000
 	bl SpawnStairs
-	bl DungeonRngSetPrimary
+	bl DgRandom_EndSystemRandomMode
 _02340EC8:
 	mov r6, #0
 	mov r7, r6
@@ -12928,7 +12928,7 @@ GetHiddenStairsType: ; 0x02342D9C
 	cmpne r0, #2
 	beq _02342EA8
 	mov r0, #4
-	bl DungeonRngSetSecondary
+	bl DgRandom_StartSystemRandomMode
 	ldrb r0, [r5, #0x16]
 	cmp r0, #0
 	bne _02342EA4
@@ -12990,7 +12990,7 @@ _02342E94:
 	movhs r1, #1
 	strhsb r1, [r0]
 _02342EA4:
-	bl DungeonRngSetPrimary
+	bl DgRandom_EndSystemRandomMode
 _02342EA8:
 	mov r0, r4
 	ldmia sp!, {r4, r5, r6, pc}

@@ -7,8 +7,8 @@
 .public DungeonRand16Bit
 .public DungeonRandInt
 .public DungeonRandRange
-.public DungeonRngSetPrimary
-.public DungeonRngSetSecondary
+.public DgRandom_EndSystemRandomMode
+.public DgRandom_StartSystemRandomMode
 .public EntityIsValid__02345698
 .public GenerateItem
 .public GetActualBuyPrice

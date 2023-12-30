@@ -4640,7 +4640,7 @@ _022E71C0:
 	strh r2, [sp, #0x44]
 	strh r1, [sp, #0x46]
 	mov fp, #1
-	bl DungeonRngSetSecondary
+	bl DgRandom_StartSystemRandomMode
 	bl IsDestinationFloorWithMonster
 	str r0, [sp, #0x10]
 	ldr r3, _022E7A04 ; =0x0000FFFF
@@ -4952,7 +4952,7 @@ _022E764C:
 	bl MemFree
 	mov r0, r7
 	bl MemFree
-	bl DungeonRngSetPrimary
+	bl DgRandom_EndSystemRandomMode
 _022E7674:
 	mov r4, #0
 	bl FloorNumberIsEven

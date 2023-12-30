@@ -18,8 +18,8 @@
 .public DungeonGetTotalSpriteFileSize
 .public DungeonGoesUp
 .public DungeonRandInt
-.public DungeonRngSetPrimary
-.public DungeonRngSetSecondary
+.public DgRandom_EndSystemRandomMode
+.public DgRandom_StartSystemRandomMode
 .public EntityIsValid__022E37B8
 .public EntityIsValid__022E95F4
 .public FloorNumberIsEven

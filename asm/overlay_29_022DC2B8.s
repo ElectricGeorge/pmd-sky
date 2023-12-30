@@ -3009,8 +3009,8 @@ _022DEA40:
 _022DEA58: .word ov29_02353534
 	arm_func_end ov29_022DEA34
 
-	arm_func_start DungeonAlloc
-DungeonAlloc: ; 0x022DEA5C
+	arm_func_start Dg_CreateDungeonBuffer
+Dg_CreateDungeonBuffer: ; 0x022DEA5C
 	stmdb sp!, {r3, lr}
 	ldr r0, _022DEA78 ; =0x0002CB14
 	mov r1, #0
@@ -3021,7 +3021,7 @@ DungeonAlloc: ; 0x022DEA5C
 	.align 2, 0
 _022DEA78: .word 0x0002CB14
 _022DEA7C: .word DUNGEON_PTR
-	arm_func_end DungeonAlloc
+	arm_func_end Dg_CreateDungeonBuffer
 
 	arm_func_start GetDungeonPtrMaster
 GetDungeonPtrMaster: ; 0x022DEA80
