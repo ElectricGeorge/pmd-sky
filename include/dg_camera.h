@@ -1,5 +1,5 @@
-#ifndef PMDSKY_OVERLAY_29_022E32E8_H
-#define PMDSKY_OVERLAY_29_022E32E8_H
+#ifndef PMDSKY_DG_CAMERA_H
+#define PMDSKY_DG_CAMERA_H
 
 #include "dungeon_mode.h"
 
@@ -8,4 +8,4 @@
 // return: bool
 u8 EntityIsValid__022E32E8(struct entity *entity);
 
-#endif //PMDSKY_OVERLAY_29_022E32E8_H
+#endif //PMDSKY_DG_CAMERA_H

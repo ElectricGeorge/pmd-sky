@@ -1,5 +1,5 @@
-#ifndef PMDSKY_OVERLAY_29_022E1A1C_H
-#define PMDSKY_OVERLAY_29_022E1A1C_H
+#ifndef PMDSKY_DG_OBJECT_H
+#define PMDSKY_DG_OBJECT_H
 
 #include "dungeon_mode.h"
 
@@ -8,4 +8,4 @@
 // return: bool
 u8 EntityIsValid__022E1A1C(struct entity *entity);
 
-#endif //PMDSKY_OVERLAY_29_022E1A1C_H
+#endif //PMDSKY_DG_OBJECT_H
