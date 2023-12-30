@@ -57,10 +57,10 @@ _02054CD4: .word 0xFFFFFBDC
 BaseFormsEqual: ; 0x02054CD8
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r4, r1
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r5, r0
 	mov r0, r4
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r4, r0
 	mov r0, r5
 	bl GetBaseFormCastformDeoxysCherrim
@@ -124,10 +124,10 @@ _02054DC0: .word 0x000001CE
 DexNumbersEqual: ; 0x02054DC4
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r4, r1
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r5, r0
 	mov r0, r4
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r4, r0
 	mov r0, r5
 	bl GetBaseFormCastformDeoxysCherrim
@@ -12434,7 +12434,7 @@ _0205EF54:
 	mov r0, r6
 	bl GetBaseFormBurmyWormadamShellosGastrodonCherrim
 	mov r7, r0
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov fp, r0
 	mov r0, r7
 	bl GetSecondFormIfValid
@@ -16866,7 +16866,7 @@ IsMonsterMissionAllowed: ; 0x02062A14
 	stmdb sp!, {r4, lr}
 	mov r4, #0
 	bl GetBaseForm
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	ldr r1, _02062A54 ; =MISSION_BANNED_MONSTERS
 	b _02062A3C
 _02062A2C:
@@ -16898,7 +16898,7 @@ _02062A64: .word CanMonsterBeUsedForMission
 CanMonsterBeUsedForMission: ; 0x02062A68
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r4, r0
 	bl HasMonsterBeenAttackedInDungeons
 	cmp r0, #0
@@ -16929,7 +16929,7 @@ _02062AB8:
 sub_02062AD0: ; 0x02062AD0
 	stmdb sp!, {r3, lr}
 	bl GetBaseForm
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	bl IsMonsterMissionAllowedStory
 	ldmia sp!, {r3, pc}
 	arm_func_end sub_02062AD0
@@ -16957,13 +16957,13 @@ _02062B18:
 	bne _02062B08
 	bl GetHero
 	ldrsh r0, [r0, #4]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	cmp r4, r0
 	moveq r0, #0
 	ldmeqia sp!, {r4, pc}
 	bl GetPartner
 	ldrsh r0, [r0, #4]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	cmp r4, r0
 	moveq r0, #0
 	ldmeqia sp!, {r4, pc}

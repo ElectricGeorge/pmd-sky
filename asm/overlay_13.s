@@ -1625,7 +1625,7 @@ _0238B878:
 	cmp r0, #2
 	bne _0238B8BC
 	mov r0, r4
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r4, r0
 _0238B8BC:
 	ldr r1, _0238B4F8 ; =OVERLAY13_UNKNOWN_POINTER__NA_238CEA0

@@ -9436,7 +9436,7 @@ ov01_02330EB8: ; 0x02330EB8
 	mov r5, r1
 	mov r4, r2
 	strb ip, [r3, #1]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r3, #0
 	ldr r2, _02330FE8 ; =PRINTS_STRUCT
 	b _02330F04

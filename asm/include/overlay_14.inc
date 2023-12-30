@@ -15,7 +15,7 @@
 .public CreateTextBox
 .public Debug_Print0
 .public DrawTextInWindow
-.public FemaleToMaleForm
+.public Monster_FemaleToMaleForm
 .public GetHero
 .public GetHeroMemberIdx
 .public GetLanguage

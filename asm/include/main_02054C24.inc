@@ -220,7 +220,7 @@
 .public ENTITIES
 .public EVENTS
 .public ExplorersOfSkyMain
-.public FemaleToMaleForm
+.public Monster_FemaleToMaleForm
 .public FileInit
 .public FindItemInInventory
 .public GetAbility

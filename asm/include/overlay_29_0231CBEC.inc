@@ -23,7 +23,7 @@
 .public EnsureCanStandCurrentTile
 .public EntityIsValid__0231CBC8
 .public EntityIsValid__0231EDD8
-.public FemaleToMaleForm
+.public Monster_FemaleToMaleForm
 .public GetActiveTeamMember
 .public GetApparentWeather
 .public GetItemMoveId16

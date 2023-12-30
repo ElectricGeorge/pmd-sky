@@ -97,7 +97,7 @@ _0238A210:
 	cmp r0, #1
 	mov r0, r4
 	bne _0238A254
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r4, r0
 	b _0238A264
 _0238A254:
@@ -146,7 +146,7 @@ _0238A294:
 	cmp r0, #1
 	mov r0, r4
 	bne _0238A2F8
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r4, r0
 	b _0238A308
 _0238A2F8:
@@ -202,7 +202,7 @@ _0238A36C:
 	cmp r0, #1
 	mov r0, r4
 	bne _0238A3B0
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r4, r0
 	b _0238A3C0
 _0238A3B0:

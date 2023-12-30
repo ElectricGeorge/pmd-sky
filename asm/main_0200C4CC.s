@@ -6156,7 +6156,7 @@ IsExclusiveItemIdForMonster: ; 0x02010FC4
 	mov r5, #0
 	ble _02011000
 	mov r0, r8
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r8, r0
 _02011000:
 	mov r0, sb
@@ -6796,7 +6796,7 @@ ApplyNectarBoostToGroundMonster: ; 0x020117FC
 IsMonsterAffectedByGravelyrockGroundMode: ; 0x02011830
 	stmdb sp!, {r3, lr}
 	ldrsh r0, [r0, #4]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	cmp r0, #0x1e0
 	cmpne r0, #0xb9
 	moveq r0, #1
@@ -8358,7 +8358,7 @@ _02012C14:
 	bl GetTeamMember
 	ldrsh r0, [r0, #4]
 	mov sb, #0
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	bl GetBaseFormCastformDeoxysCherrim
 	mov r3, sb
 	b _02012C58
@@ -8439,7 +8439,7 @@ _02012D38:
 _02012D48:
 	mov r0, sb, lsl #0x10
 	mov r0, r0, asr #0x10
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	bl GetBaseFormCastformDeoxysCherrim
 	mov r8, r0
 	bl IsMonsterValid
@@ -58867,7 +58867,7 @@ _0203B598:
 	mov r0, #0x44
 	smlabb r0, r1, r0, r2
 	ldrsh r0, [r0, #4]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r1, r8, lsl #0x10
 	mov r7, r0
 	mov r6, r1, asr #0x10
@@ -58882,7 +58882,7 @@ _0203B5DC:
 	ldrsh r0, [r0, #0x12]
 	smlabb r0, r0, fp, r1
 	ldrsh r0, [r0, #4]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	cmp r7, r0
 	blt _0203B614
 	add r0, r6, #1
@@ -58925,7 +58925,7 @@ _0203B668:
 	mov r0, #0x44
 	smlabb r0, r1, r0, r2
 	ldrb r0, [r0, #1]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r1, r8, lsl #0x10
 	mov r6, r0
 	mov r7, r1, asr #0x10
@@ -58940,7 +58940,7 @@ _0203B6AC:
 	ldrsh r0, [r0, #0x12]
 	smlabb r0, r0, fp, r1
 	ldrb r0, [r0, #1]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	cmp r6, r0
 	bgt _0203B6E4
 	add r0, r7, #1
@@ -80482,7 +80482,7 @@ _0204D1C0: .word GLOBAL_PROGRESS_PTR
 	arm_func_start SetMonsterFlag2
 SetMonsterFlag2: ; 0x0204D1C4
 	stmdb sp!, {r3, lr}
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	ldr r2, _0204D204 ; =GLOBAL_PROGRESS_PTR
 	mov r1, r0, asr #4
 	ldr r3, [r2]
@@ -80504,7 +80504,7 @@ _0204D204: .word GLOBAL_PROGRESS_PTR
 	arm_func_start HasMonsterBeenAttackedInDungeons
 HasMonsterBeenAttackedInDungeons: ; 0x0204D208
 	stmdb sp!, {r3, lr}
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	ldr r3, _0204D24C ; =GLOBAL_PROGRESS_PTR
 	mov r1, r0, asr #4
 	add r2, r0, r1, lsr #27
@@ -89015,7 +89015,7 @@ sub_02053A0C: ; 0x02053A0C
 	mov r0, r1
 	mov r5, r2
 	mov r4, r3
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov ip, #0
 	mov r1, r0
 	str ip, [sp]
@@ -89037,7 +89037,7 @@ sub_02053A50: ; 0x02053A50
 	mov sb, r1
 	mov r8, r2
 	mov r5, #0
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r4, r0
 	bl sub_02053B38
 	cmp r0, #0
@@ -89121,14 +89121,14 @@ sub_02053B60: ; 0x02053B60
 	mov r0, r1
 	mov r7, r2
 	mov r6, r3
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r4, r0
 	bl sub_02053B38
 	cmp r0, #0
 	movne r0, #0
 	bne _02053C98
 	mov r0, r4
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r5, #0
 	mov r1, r0
 	str r5, [sp]
@@ -89414,7 +89414,7 @@ sub_02053F10: ; 0x02053F10
 	b _02053F60
 _02053F38:
 	mov r0, r1
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r4, #0
 	mov r2, #1
 	mov r1, r0
@@ -89845,7 +89845,7 @@ _02054500:
 	mov r0, sl
 	bl sub_020546E8
 	ldrsh r0, [sl, #4]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r1, #0
 	str r1, [sp]
 	str r1, [sp, #4]

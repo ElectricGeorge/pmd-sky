@@ -892,7 +892,7 @@ ApplyGravelyrockEffect: ; 0x0231D7C0
 	ldr r1, [r5, #0xb4]
 	mov r6, r0
 	ldrsh r0, [r1, #2]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r1, #1
 	mov r4, r0
 	str r1, [sp]
@@ -2053,7 +2053,7 @@ _0231E828:
 	b _0231E8E0
 _0231E83C:
 	ldrsh r0, [r6, #4]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	ldrsh r0, [r6, #4]
 	cmp r0, #0x1e0
 	cmpne r0, #0xb9

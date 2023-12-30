@@ -12,7 +12,7 @@
 .public DUNGEON_PTR
 .public DungeonRandInt
 .public EntityIsValid__022EE348
-.public FemaleToMaleForm
+.public Monster_FemaleToMaleForm
 .public GenerateStandardItem
 .public GetFloorType
 .public GetItemCategoryVeneer

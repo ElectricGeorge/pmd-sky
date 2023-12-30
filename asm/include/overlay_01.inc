@@ -31,7 +31,7 @@
 .public DeleteWanTableEntryVeneer
 .public DrawTextInWindow
 .public EnableIrqFlag
-.public FemaleToMaleForm
+.public Monster_FemaleToMaleForm
 .public GetAdvancedMenuCurrentOption
 .public GetAdvancedMenuResult
 .public GetAdventureLogCompleted

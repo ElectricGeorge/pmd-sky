@@ -40,7 +40,7 @@
 .public EntityIsValid__0231B194
 .public EntityIsValid__0231CBC8
 .public ExclusiveItemEffectFlagTest
-.public FemaleToMaleForm
+.public Monster_FemaleToMaleForm
 .public GEO_PEBBLE_DAMAGE
 .public GetActiveTeamMember
 .public GetItemCategoryVeneer

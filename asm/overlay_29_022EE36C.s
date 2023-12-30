@@ -1290,7 +1290,7 @@ _022EF4E8:
 	mov r0, #0
 	bl GetMonsterIdToSpawn
 	mov fp, r0
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	ldr r1, _022EF5D0 ; =0x0000017B
 	cmp r0, r1
 	cmpne r0, #0x17c

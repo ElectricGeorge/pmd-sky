@@ -187,7 +187,7 @@ IsInSpawnList: ; 0x0231B3FC
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r5, r0
 	mov r0, r1
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov r4, r0
 	mov r6, #0
 	b _0231B44C
@@ -198,7 +198,7 @@ _0231B418:
 	beq _0231B440
 	add r0, r5, r1
 	ldrsh r0, [r0, #2]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	cmp r4, r0
 	moveq r0, #1
 	ldmeqia sp!, {r4, r5, r6, pc}

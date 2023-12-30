@@ -74,7 +74,7 @@
 .public EuclideanNorm__020050B0
 .public EVENTS
 .public Debug_FatalError
-.public FemaleToMaleForm
+.public Monster_FemaleToMaleForm
 .public FileClose
 .public FileRom_Veneer_FileInit
 .public FileRom_HandleOpen

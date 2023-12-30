@@ -28026,7 +28026,7 @@ _022F3A98:
 	add r0, r0, #0x18
 	bl SetAnimDataFields2
 	bl ov16_0238CCA8
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	ldr r1, _022F3E60 ; =0x00000807
 	bl GetIdleAnimationType
 	mov r0, r0, lsl #0x10
@@ -28437,7 +28437,7 @@ _022F40D0:
 	ldr r0, [r0, #0x33c]
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	ldr r1, _022F4354 ; =0x00000807
 	bl GetIdleAnimationType
 	ldrh r2, [r4, #0x10]

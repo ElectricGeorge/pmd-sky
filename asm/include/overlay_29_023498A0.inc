@@ -22,7 +22,7 @@
 .public DungeonZInit
 .public EndNegativeStatusConditionWrapper
 .public EntityIsValid__0234987C
-.public FemaleToMaleForm
+.public Monster_FemaleToMaleForm
 .public FixedRoomIsSubstituteRoom
 .public GetAcceptedMission
 .public GetDungeonPtrMaster

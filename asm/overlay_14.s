@@ -2628,7 +2628,7 @@ _0238C564:
 	strh r1, [r0, #0xa2]
 	ldrsh r0, [r6, #4]
 	ldr r4, [r2]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	add r1, r4, #0x3000
 	ldr r1, [r1, #0x87c]
 	add r1, r4, r1, lsl #1
@@ -2644,7 +2644,7 @@ _0238C564:
 	add r1, r2, r1, lsl #1
 	add r1, r1, #0x3800
 	ldrsh r4, [r1, #0xa2]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	cmp r4, r0
 	ldrne r0, _0238CA64 ; =0x00000119
 	cmpne r4, r0
@@ -2695,11 +2695,11 @@ _0238C690:
 	mov r0, r0, lsl #1
 	ldrsh r8, [r4, r0]
 	ldrsh r0, [r6, #4]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	cmp r8, r0
 	beq _0238C690
 	ldrsh r0, [r5, #4]
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	cmp r8, r0
 	cmpne r8, fp
 	beq _0238C690

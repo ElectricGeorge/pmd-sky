@@ -11,7 +11,7 @@
 .public CreateSimpleMenuFromStringIds
 .public CreateTextBox
 .public DrawTextInWindow
-.public FemaleToMaleForm
+.public Monster_FemaleToMaleForm
 .public GetAdvancedMenuCurrentOption
 .public GetAdvancedMenuResult
 .public Debug_GetDebugFlag

@@ -20,7 +20,7 @@
 .public Debug_Print0
 .public DungeonSwapIdToIdx
 .public EnableIqSkill
-.public FemaleToMaleForm
+.public Monster_FemaleToMaleForm
 .public GetBodySize
 .public GetCurrentBagCapacity
 .public GetDungeonMode

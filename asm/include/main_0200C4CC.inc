@@ -798,7 +798,7 @@
 .public EXCLUSIVE_ITEM_SPECIAL_DEFENSE_BOOSTS
 .public EXCLUSIVE_ITEM_STAT_BOOST_DATA_INDEXES
 .public Debug_FatalError
-.public FemaleToMaleForm
+.public Monster_FemaleToMaleForm
 .public FileClose
 .public FileGetSize
 .public FileRom_Veneer_FileInit

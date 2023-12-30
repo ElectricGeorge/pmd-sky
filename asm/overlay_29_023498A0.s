@@ -104,7 +104,7 @@ _023499F4:
 	cmp r0, #0xa
 	bne _02349A28
 	mov r0, sl
-	bl FemaleToMaleForm
+	bl Monster_FemaleToMaleForm
 	mov sl, r0
 	b _02349A3C
 _02349A28:
